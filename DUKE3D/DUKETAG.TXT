@@ -1,0 +1,392 @@
+Duke-Tag!
+
+
+
+Duke-Tag! is an exciting new way to compete in multiplayer 
+games of Duke Nukem 3d. It combines the thrill of Dukematch 
+and the excitement of cooperation with teammates.
+
+Duke-Tag! is built into the final map of the Duke Nukem
+3d Atomic Edition (Episode 4, Level 10).
+Note that Episode 4, Level 10 is a fully functioning Solo 
+Play map, a normal Dukematch arena, and a Duke-Tag! game.
+
+This game is playable over a network, through your modem
+when using multiplayer or on-line services like T.E.N. (Total
+Entertainment Network).
+
+To activate Duke-Tag!, one player must trigger the "Duke-Tag!" 
+switch found in the Starting Box only in Multiplayer mode.  
+Note that at least 4 players are required for Duke-Tag!  
+After the Duke-Tag! switch is activated, the players will 
+be obstructed from either Combat Fort for about 45 seconds.  
+During this time, players may gather weapons and prepare 
+themselves for the game.  If players are remotely dialing 
+an on-line gaming service (such as T.E.N.) gamers may use 
+the multi-play chat functions to choose teams, and develop 
+strategies before the game starts. 
+
+
+
+Players:	Duke-Tag! requires a minimum of 4 players 
+and a maximum of 8 Players are divided as equally as
+possible into two teams - Brown and Green.  In games with 
+an odd number of players, the odd man can be the "Equalizer" 
+who's goal is to kill the players on both teams to prevent 
+either team from scoring.
+	Each team must contain at least one each of two 
+distinct types of player - a Runner and a Flyer. Extra 
+players may take on the roles of Defenders and Attackers.  
+Players may switch roles at any time during the game, but 
+must always stay on the same teams.  Remember, though, that 
+each team must always have at least one Runner, and one Flyer.
+	The various player types are described in detail 
+below.
+
+
+
+Object:		To score 5 points for your team by 
+maneuvering your Duke into your team's scoring zone.  In 
+order to score, the Runner will be required to gather the 
+Protective Boots from his or her team's Combat Fort and 
+make a Lava Run to the scoring zone.  In order to gather 
+the Protective Boots, his or her teammate must unlock the 
+gate that blocks the boots by activating a switch located 
+in the opposing team's Combat Fort.  However, the Boot 
+Gate Switch is located high in the air, so a Jetpack must 
+be utilized by the player (from now on referred to as the 
+"Flyer").  The Jetpacks are located in the central pillars 
+of both Combat Forts and are opened with the Jetpack 
+Switches in the opposing Combat Fort. 
+
+Quick Rules:
+
+A.  Teams Pick Colors
+B.  Brown Team's Runner goes to brown Combat Fort to hit 
+Jetpack Switch.  Green Team's Runner goes to green Combat
+ Fort to hit Jetpack Switch.
+C.  Brown Team's Flyer goes to green Combat Fort to get 
+Jetpack. Green Team's Flyer goes to brown Combat Fort to 
+get Jetpack.
+D.  Brown Team's Flyer hits the Boot Gate Switch in the 
+green Combat Fort.  Green Team's Flyer hits the Boot Gate 
+Switch in the brown Combat Fort.
+E.  Brown Team's Runner gets the Protective Boots and 
+teleports to the green Combat Fort. Green Team's Runner 
+gets the Protective Boots and teleports to the brown Combat Fort.
+F.  Together Brown Team's Runner and Flyer exit the green 
+Combat Fort and make their way to the Lava Run entrance.  
+Green Team does the same from the brown Combat Fort.
+G.  Each team's Runner navigates the Lava Run and jumps 
+through their respective Scoring Zone teleporters.
+H.  A point is scored for each team that successfully 
+completed their run, and the process is repeated until 
+one team has score 5 points and a win is indicated.
+
+Note: 	Throughout the game, players are encouraged to 
+prevent opposing team players from reaching their goals 
+using whatever weapons and methods are possible from 
+within the game.  Frag away!
+
+
+
+
+Detailed Rules:
+
+Map:	The map is comprised of four main areas.
+
+1.  Starting Box:	All players will begin and re-
+morph in the starting box.  In this area you'll find 
+several weapons and a switch which will activate Duke-
+Tag! in multiplayer mode only.  Within the Starting Box 
+is a group of teleporters which will transport the 
+players to either the brown or green side of the Lava 
+Run.  After dying or scoring, players will remorph inside 
+the Starting Box.
+2.  Lava Run:		In the center of the map is a huge 
+field of purple lava that is more destructive than any 
+other lava in the game.  Without Protective Boots, it 
+is impossible for a player to traverse the distance of 
+the Lava Run and survive.  At the farthest end of the Lava 
+Run is the entrance to the Scoring Zone.
+3.  Scoring Zone:	In this area, players will find 
+a teleporter for each team color.  Stepping through the 
+teleporter will score a point for each respective team.  
+Each team's Scoring Zones will not open until that team 
+has gathered the Protective Boots from their own Combat 
+Fort. The Scoring Gate will only remain open for about a 
+minute after the boots have been gathered, so players 
+must move quickly to score. 
+4.  Combat Forts:	On each side of the Lava Run is 
+a Combat Fort - one brown, and one green.  In each fort 
+is a locked gate that contains a pair of Protective Boots, 
+a switch that will unlock the Boot Gate in the opposite 
+fort, a hidden Jetpack, and a switch which will unlock the 
+Jetpack in the opposite fort.  Below the Combat Forts is a 
+vast underwater section that contains a Safety Box that 
+players will be transported to after gathering the Protective 
+Boots from their home Combat Fort.
+
+
+
+
+
+In addition to the main areas, there are other notable 
+functions built into the map:
+	
+A.  Scoring Indicators:	Throughout the map there are 
+indicators in brown and green that indicate each team's score.
+B.  Direction Indicators:	Near the exit to each fort in 
+the Lava Run area there are directional arrows colored Green 
+and Brown that will reveal themselves when a team is making 
+a scoring run.  The arrows are pointing in the direction of 
+the entrance to the Lava Run itself.
+C.  Gate Indicators:	In each Combat Fort, and near the 
+opening of the Lava Run there is a "Gate Open" indicator for 
+each team that will reveal itself when that team has gathered 
+the boots and thus opened their Scoring Gate.
+D.  Team Wins!:	When one of the two teams has earned 5 points 
+an indicator will reveal itself near the opening of the Lava 
+Run that the brown or green team has won the game.  At that 
+time, a Nuke Switch will lower itself.  When activated, the 
+Nuke Switch will reset Duke-Tag! for another game. 
+E.  Sound Cues:		Several Sound Cues will activate 
+throughout the game indicating many important actions players 
+can complete.  You'll hear sounds when a player grabs the 
+Protective Boots, or when a team has scored.  Listen carefully 
+for these sounds and change your mode of attack or defense 
+based on what your opponents are doing.
+
+Also, there are a number of very important switches and 
+gates that must be used to successfully score points in 
+Duke-Tag!
+
+A.  Boot Gate:	Each Combat Fort contains a gate behind 
+which are the precious Protective Boots each team requires 
+to make their Lava Runs.  Each team must gather their boots 
+from the Combat Fort which matches their team color.  The 
+green team, for example, must send its Runner to the green 
+Combat Fort to get the Protective Boots from behind the 
+Boot Gate.
+B.  Boot Gate Switch:	Each Combat Fort also houses a 
+switch which will temporarily unlock the Protective Boots 
+in the opposite Combat Fort. It is the Flyer who will trigger 
+this switch after he or she gathers the Jetpack.  The brown 
+team, for example, would send its Flyer to the green Combat 
+Fort to hit the Boot Gate Switch.
+C.  Jetpack Pillar:	In each Combat Fort is a central 
+pillar which contains a hidden Jetpack.  It is required that 
+each team's Flyer gather a Jetpack to trigger the elevated 
+Boot Gate Switch.
+D.  Jetpack Switch:	In order to gain access to a Jetpack, 
+one player must trigger the Jetpack Switch in the opposite 
+Combat Fort than that in which the Jetpack is desired.  For 
+example, if a player wishes to gather the Jetpack in the 
+brown Combat Fort, the Jetpack Switch must be activated in 
+the green Combat Fort.  Each Combat Fort's Jetpack Switch 
+allows access to the Jetpack in the opposite Combat Fort.
+E.  Scoring Gate:	At the end of the Lava Run are a 
+pair of Scoring Zones.  These zones are secured by a Scoring 
+Gate.  The Scoring Gate is automatically opened when a 
+player gathers the Protective Boots.  So, for example, 
+gathering the Protective Boots in the green Combat Fort 
+will open the Scoring Gate for the Green Team and likewise 
+for the Brown Team. Note: After the Protective Boots are 
+gathered and the Scoring Gate is opened, the gate will close 
+after about one minute elapses.  Players must gather the 
+boots and complete their score before the time runs out. 
+If time runs out, the team must again gather the Protective 
+Boots to re-open the Scoring Gate (even if the Runner 
+already has a set of boots).
+F.  Safety Box:		After gathering the Protective 
+Boots, players will be transported to the opposing team's 
+Combat Fort into a Safety Box.  This box, found underwater,
+is surrounded by a force field.  The box will only be open 
+when a player has grabbed the Protective Boots and will 
+close after time has elapsed or when the team has 
+successfully scored.
+
+
+
+Duke-Tag! Players:
+
+
+1.  The Runner:	The Runner is the player that will gather 
+the Protective Boots and navigate the Lava Run to the Scoring 
+Zone.  Each team must have a Runner.
+2.  The Flyer:		This player will gather the Jetpack 
+and open the Boot Gate for his or her teammate.  It is often 
+good practice for the Flyer to defend and protect his or her 
+teammate as the Runner makes the Lava Run to the Scoring Zone.  
+Each team must have a Flyer.
+3.  Attacker:		Optionally, in games with more than 
+four players, some may opt to become Attackers.  It is the 
+Attacker's goal to make sure the opposing team does not score.  
+Typically, the Attacker will shadow the opposing team's Runner 
+or spend large amounts of time patrolling the Lava Run entrance. 
+Often, all players on a team will temporarily take on the role 
+of the Attacker when it is known that the opposing team has 
+gathered the boots and is making a Lava Run.
+4.  Defender:		Also, when enough players are 
+present, some of the gamers may choose to become Defenders.  
+The Defender will become the Runner's "bodyguard."  Knowing 
+that scoring depends solely on the Runner's survival, the 
+Defender will use any means available to keep the Runner 
+alive.  If there are Attackers in the game, this may be a 
+difficult task, especially since only the Runner with his 
+Protective Boots can survive the Lava Run. Often, the Flyer 
+will temporarily take on the role of the Defender when his 
+or her team's Runner has gathered the Protective Boots, and 
+begins his or her Lava Run.
+5.  Equalizer:		Optionally, odd players can choose 
+to not affiliate themselves with either team.  Their only 
+goal is to patrol the Combat Forts and the Lava Run and kill 
+anything in sight.  It is sometimes fun to give the Equalizer 
+a separate goal, such as keeping either team from scoring 
+in a certain time limit, or gathering more frags than the 
+other players combined. Note: that it is also possible to 
+use odd players to help balance unfair teams.  If a pair of 
+extremely skilled Duke-Taggers can't be beat, try ganging 
+up on them with 3 or more players on the opposite team!
+
+
+
+
+Game Mechanics and Other Rules:
+
+
+1.  Pre-map:		At the start of the game, both 
+Combat Forts are blocked and the map is set for Solo or 
+Dukematch mode. When the Duke-Tag! switch is activated 
+several things happen.
+
+A.  A timer is activated which will open access to the 
+Combat Zones after about 45 seconds.
+B.  All Score Indicators are opened.
+C.  The Boot Gate Switch, the Jetpack Switch, and the 
+Boot Gates are revealed in each Combat Fort.
+D.  Solo play areas are blocked.
+E.  All Gate Open indicators are prepared for activation.
+F.  All Direction Indicators are prepared for activation.
+
+
+
+2.  Protective Boots:	When a player steps over the 
+Protective Boots, several things happen throughout the map.
+
+A.  The Boot Gate is closed behind the player.  The gate 
+will remain closed for about 1 minute.
+B.  The Scoring Gate is opened for that team.  The Scoring 
+Gate will remain open for about 1 minute.
+C.  The Direction Indicators are opened for that team.  
+These arrows will remain open for the duration of the team's 
+Lava Run.  When time elapses the Direction Indicators will close.
+D.  Several Gate Open Indicators will reveal themselves.  
+These indicators will remain exposed until time runs out 
+(1 minute).
+E.  A wall surrounding the underwater Safety Box will open 
+revealing that a player will soon (almost instantly) be 
+teleporting through. This wall will remain open for the 
+duration of the Lava Run.
+
+3.  Scoring Zone:	When a player passes through the 
+Scoring Gate and into the Scoring Zone, several things occur.
+
+A.  Each Score Indicator throughout the map will add one 
+point to that team's score.
+B.  On the fifth pass through the Scoring Zone two special 
+things happen.  (1) A "Team Wins" indicator will reveal 
+itself, and (2) a "Reset Duke-Tag!" Nuke Button will 
+reveal itself.
+C.  The player who scored will be transported to the 
+Starting Box.
+
+4.  Combat Forts:	There are several functions in 
+each Combat Fort.
+
+A.  When a Jetpack Switch is activated in one Combat Fort, 
+the Jetpack pillar will raise in the other Combat Fort.  
+This pillar will remain open for about 4 seconds and will 
+not crush the player if they are standing under it when it 
+closes. The switch may be reactivated as often as the 
+players wish
+B.  When a Boot Switch is activated in one Combat Fort, the 
+Boot Gate will open in the other Combat Fort for about 3 
+seconds. This switch may be reactivated as often as the 
+players wish.
+C.  When a player steps on the ledge in front of the 
+Protective Boot room, the door will split open and the 
+window shutters to the outside will open.  The window 
+shutters will always remain open, but (after originally 
+opened) the split door may be opened and closed at any 
+time by activating the door normally.
+D.  When a player gathers the Protective Boots, he or 
+she will be transported to the opposing Combat Fort into 
+that fort's Safety Box.  The box walls will have been 
+opened and the player will have a great view of the 
+underwater area of that Combat Fort.
+
+
+Tips for Successful Duke-Tag!
+
+1.  Be Unpredictable:		Players who always 
+approach the Combat Forts using the same entrance are 
+easily defeated.  Remember, there are three ways to 
+enter each Combat Fort: From the back door chute, the 
+front door, or the underwater pool.
+2.  Communicate:		Develop codes with which
+ you can easily communicate with your partner using 
+Multiplay Chat. You must always let your partner know 
+when you're ready for the Jetpack Switch, the Boot Switch, 
+or are making a Lava Run and need assistance.
+3.  Balance Offense and Defense:	When the opposing 
+team is about to make a Lava Run, go on the defensive!  
+Fill the Safety Box with pipe bombs or shower a Lava Run 
+ramp with Devastator  ordinance!
+4.  Be Preemptive:		When the opposing team 
+is preparing to get the Protective Boots, try dumping a 
+few RPG rounds into the Boot room.  If you're the Runner, 
+you might fill the Boot Switch area in your fort with 
+pipe bombs and wait for the other team's Flyer to come 
+along and suck it down!
+5.  Listen for Sounds:		The sound cues provide 
+important feedback as to what your opponents and 
+teammates are doing.  When you hear a sound indicating 
+that your partner has grabbed the Protective Boots 
+(team running), be prepared to provide cover as he or 
+she comes in through the Safety Box.
+6.  Hold the Combat Fort:	If your opponents can't 
+get inside, they can never score!
+7.  Team up on Better Players:	If you find it 
+impossible to penetrate a secured Combat Fort alone, 
+have your teammate come with you to gang up on the 
+lone defender.
+8.  Know the Map:		Learn the locations 
+of all the weapons, the armor, and the health canisters 
+found throughout the map.
+9.  Use the Cameras:		You may use the Security 
+Cameras in the center overpass to check out each 
+Combat Fort and their main entrances.  Find out where 
+the Combat Fort's defender is camping before you charge.
+10.  Use the Conveyors:		On defense, you can out 
+run the Runner from the outside by riding a conveyor 
+belt.  Use this speed advantage to take out the Runner 
+before he or she scores.
+11.  Split your Tasks:		On defense, teammates 
+should split up.  One player could be a sniper from 
+the center overpass, while the other player rides the 
+conveyor along the side in an attempt to destroy the Runner.
+12.  Lure the Defenders:		As you make 
+your Lava Run, the Flyer should sacrifice his or 
+herself if necessary to keep the Runner alive.  Often, 
+the Flyer makes for a good decoy to distract the 
+defenders while the Runner can score with less resistance.
+13.  Sacrifice Yourself:		Since frags 
+aren't the goal, don't be afraid to commit suicide 
+when your health is low or when you can get to your 
+goal faster by remorphing in the Starting Box. I've 
+been known to chase Runners down the Lava Run even 
+though I don't have Protective Boots!
+
+
+-Randall S. Pitchford II         3dRealms Entertainment

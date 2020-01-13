@@ -1,0 +1,291 @@
+--------------------------------------------------------------------------------
+Special Sprite Reference Guide
+1996 Allen H. Blum III
+--------------------------------------------------------------------------------
+
+   SECTOREFFECTOR : Sprite #1
+   ACTIVATOR : Sprite #2
+   TOUCHPLATE : Sprite #3
+   ACTIVATORLOCKED : Sprite #4
+   MUSICANDSFX : Sprite #5
+   LOCATORS : Sprite #6
+   CYCLER : Sprite #7
+   MASTERSWITCH : Sprite #8
+   RESPAWN : Sprite #9
+   GPSPEED : Sprite #10
+   ACCESSSWITCH : Sprite #130
+   SWITCH : Sprite #132 and all other SWITCHes
+   NUKEBUTTON : Sprite #142
+   MULTISWITCH : Sprite #146
+   DOORTILE5 : Tile #150 and all other DOORTILEs
+   DIPSWITCH : Sprite #162
+   VIEWSCREEN : Sprite #502
+   CRACK1 : Sprite #546 and all other CRACKs
+   MIRROR : Tile #560
+   CAMERA1 : Sprite #621
+   CANWITHSOMETHING : Sprite #1232
+   SEENINE : Sprite #1247
+   FEMPIC1 : Sprite #1280
+   APLAYER : Sprite #1405
+
+--------------------------------------------------------------------------------
+Definitions:
+--------------------------------------------------------------------------------
+
+SECTOREFFECTOR : Sprite #1
+
+   :The Sector Effector Sprite is used to create game effects and
+    manipulate Sector attributes. The SE is the main tool to create
+    effects such as Earthquakes, Explosions, and Lighting Effects. Place
+    a Sprite #1 in the sector to effect.
+
+   Lotag : See !SE.TXT for details
+   Hitag : Set equal to other SE Sprites with same Lotag to activate
+          together. See Sector Effect Reference (!SE.TXT) for more details.
+
+   Comments:
+      :Multiple SE Sprites can be used in a Sector to create different
+       effects.
+
+ACTIVATOR : Sprite #2
+
+   :The Activator Sprite is used with Switchs or the TOUCHPLATE Sprite
+    to activate the Sector Lotag function or any Sector Effectors within
+    the Sector.
+
+   Lotag : Set equal to a Switch Lotag or a TOUCHPLATE Lotag
+   Hitag : 0 = normal/default. 
+               1 = Open door only.   Only works for Sector Tag 20 or 21 doors.
+               2 = Close door only.  Only works for Sector Tag 20 or 21 doors.
+
+TOUCHPLATE : Sprite #3
+
+   :The Touchplate will activate an ACTIVATOR or a MASTERSWITCH Sprite
+    when the player walks on the sector floor.
+
+   Lotag : Set equal to an ACTIVATOR or MASTERSWITCH Lotag.
+   Hitag : 0  = Activate touchplate every time player walks on the sector.
+           >0 = The touchplate will only activate this many times when
+                the player walks on the sector then never again.
+
+ACTIVATORLOCKED : Sprite #4
+
+   :The Activator locked Sprite will lock the sectors Lotag function so
+    it can not be activated by the player until it is unlocked with a
+    switch.
+
+    Lotag : Set equal to a switch's Lotag to be toggled Locked and
+            Unlocked.
+    Hitag : none.
+
+MUSICANDSFX : Sprite #5
+
+   :The Music and Sound Effects Sprite can be used 3 ways.
+      1. Activation Sound :
+         When used in a sector with a Lotag, it will play a sound when
+         the sectors Lotag function is activated.
+         Lotag : Sound number.
+         Hitag : none.
+      2. Ambient Sound :
+         When used in a sector with no Lotag, it will play an ambient
+         sound.
+         Lotag : Ambient Sound.
+         Hitag : Max distance the sound can be heard. e.g. 1024 equals
+                 the largest grid square in build.
+      3. Echo Effect :
+         When used in a sector with no Lotag, if will cause all sounds
+         to have a echo effect.
+         Lotag : 1000 + the amount of echo from 0-255.
+         Hitag : Max distance the sound can be heard. e.g. 1024 equals
+                 the largest grid square in build.
+
+LOCATORS : Sprite #6
+
+   :The Locator Sprite can be used to define a track for a Subway (SE 6
+    & SE 14) or to define a path for PigCop Recon Cars but not both in
+    the same map. Plus you can only have one path defined in a map.
+
+   Lotag : Set in an increasing order starting from 0 with no gaps in
+           the count for all the LOCATOR Sprites in the map. When the
+           Subway or PigCop Recon Car reaches the last LOCATOR Sprite,
+           it will loop back to the LOCATOR Sprite with Lotag 0.
+   Hitag : If set to 1, then the Subway will stop the LOCATOR Sprite
+           location for 5 seconds, then continue to the next LOCATOR.
+           The PigCop Recon Car is not effected.
+
+CYCLER : Sprite #7
+
+   :The Cycler Sprite is used to make the Sector Floor, Walls, and
+    Ceiling pulsate in brightness.
+   Lotag : Set the offset of how bright it will start.
+   Hitag : none
+   Palette : Set to a color if needed.
+   Shade : Set to how bright the sector will get. Set the sector
+           brightness to how dark it will get.
+
+MASTERSWITCH : Sprite #8
+
+   :The Master Switch Sprite is used to activate a Sector Lotag or an
+    Sector Effector Sprite after a time delay. This can only be
+    activated by a TOUCHPLATE Sprite.
+   Lotag : Set equal to a TOUCHPLATE Sprite Lotag to be activated by.
+   Hitag : Set for time delay until activation of Sector Tag or Sector
+           Effector Sprite.
+
+RESPAWN : Sprite #9
+
+   :The Respawn Sprite is used to Teleport in Actors and Items when
+    activated by a TOUCHPLATE Sprite.
+   Lotag : Set equal to TOUCHPLATE Sprite Lotag to be activated by.
+   Hitag : Set equal to any Sprite Number that have a name with it in
+           Build or Editart.
+
+GPSPEED : Sprite #10
+
+   :The GPSpeed Sprite is used to define the rate of movement for such
+    things as Sector Tag 20 (Ceiling Door) and Sector Effector 0(Rotate
+    Sector). See !SE.TXT and !ST.txt for more details.
+   Lotag : Set to rate.
+   Hitag : None.
+
+ACCESSSWITCH : Sprite #130
+
+   :The Access Switch is used to unlock or activate something when used
+    with a Key Card. Use the Palette to define what card to use.
+   Lotag : Set equal to ACTIVATOR or ACTIVATORLOCKED Sprite Lotag to use.
+   Hitag : Set to play sound when activated.
+   Palette : 0 = Blue card
+             21 = Red card
+             22 = Yellow card
+
+SWITCH : Sprite #132 and all other SWITCHes
+
+   :The Switch is used to unlock or activate something when activated by
+    space key.
+   Lotag : Set equal to ACTIVATOR or ACTIVATORLOCKED Sprite Lotag to use.
+   Hitag : Set to play sound when activated.
+   Palette : 0 = Normal play
+             1 = Multi-play only
+
+NUKEBUTTON : Sprite #142
+
+   :The Nuke Button is used to End a level and goto the stat screen. It
+    can also be used to goto a bonus level.
+   Lotag : Set to 65535 to end a level and go to stat screen
+           Set to 1-11 to go to a bonus level in the same volume. Must have palette adjusted for this to work.
+   Hitag : none.
+   Palette : 0 = Default.
+             14 = Bonus Level.
+
+MULTISWITCH : Sprite #146
+
+   :The Multi Switch can activate 4 multiple ACTIVATOR Sprites. It uses
+    4 consecutive Lotags to activate each ACTIVATOR. When first switched,
+    it activates ACTIVATOR Sprites A and D. The next time it activates
+    ACTIVATOR Sprites B and A. etc.. C and B.. D and C.. then A and D
+    again.
+   Lotag : Set equal to ACTIVATOR Sprites A,B+1,C+2,D+3
+   Hitag : none.
+
+DOORTILE5 : Tile #150 and all other DOORTILEs
+
+   :The Door Tiles can be used to activate ACTIVATOR Sprites when the
+    player presses upon the wall.
+   Wall Lotag : Set equal to ACTIVATOR Sprite Lotag to activate.
+   Wall Hitag : none.
+
+DIPSWITCH : Sprite #162
+
+   :The Dip Switch is used as a combination switch with a ACTIVATOR or
+    ACTIVATORLOCKED Sprite. All DIPSWITCH Sprites with equal Lotags will
+    be used for the combination.
+   Lotag : Set equal to ACTIVATOR or ACTIVATORLOCKED Sprite Lotag.
+   Hitag : 0 = set to off.
+           1 = set to on.
+
+VIEWSCREEN : Spirte #502
+
+   :The View Screen is used to view through Cameras (Sprite # 621) placed
+    around the map. It will view through all Cameras with equal Lotags.
+   Lotag : none.
+   Hitag : Set equal to CAMERA1 Sprites #621.
+
+CRACK1 : Sprite #546 and all other CRACKs
+
+   :The Crack Sprite is used to activate explosions,(SE 13) and other
+    effects.
+   Lotag : none.
+   Hitag : Set equal to SE 13 Hitag to activate. See !SE.TXT for more
+           details.
+
+   Palette : Set to 1 for Multi-play mode only.
+
+MIRROR : Tile #560
+
+   :The Mirror tile is used to place a mirror in the map. To use it you
+   must make a one-way wall (1 key in build). Put tile #560 on that
+   wall. The sector behind the mirror must be the size of every space
+   that can be seen in the mirror or problems will acure.
+
+CAMERA1 : Sprite #621
+
+   :The Camera Sprite is used to be able to view through using the
+    VIEWSCREEN Sprite.
+   Lotag : Set equal to the VIEWSCREEN Sprite Lotag to be viewed
+           through.
+   Hitag : Set to amount of turning radius. 0 equals none.
+   Shade : Set to angle of facing down.
+   Angle : Set to direction to point.
+
+CANWITHSOMETHING : Sprite #1232,4580,4581,4582
+
+   :The Can with something is used to spawn an object when it is shot.
+   Lotag : Set to Sprite number with a name in build or editart to spawn
+           when shot.
+
+SEENINE : Sprite #1247
+OOZCAN:  Sprite #1879
+
+   :The Seenine Sprite is used to activate explosions,(SE 13) and other
+    effects. It can also be used to time delay explosions.
+   Lotag : Set equal to time delay until explosion.
+   Hitag : Set equal to SE 13 Hitag to activate. See !SE.TXT for more
+           details.
+   Size : If the Sprite is shrunk in the x direction, then the sprite will
+   not be seen in the game, but the explosion will.
+
+FEMPIC1 : Sprite #1280
+
+   :The Fem Pics are used to activate the RESPAWN Sprite to spawn in any
+    Sprite with a name in Build or Editart.
+   Lotag : none.
+   Hitag : Set equal to RESPAWN Sprite to activate.
+
+APLAYER : Sprite #1405
+
+   :The APlayer Sprite is used to define where all multi-players will
+   start in the map. You must have a minimum of 7 Sprites in the map for
+   an 8 player multi-play game and a minimum of 7 Sprites in the map for
+   an 8 player Coop game.
+   Lotag : 0 = Multi-player start position
+           1 = Coop-player start position
+
+PURPLE LAVA:  Sprite #4240
+     
+     Works like green slime with three exceptions:
+      1)   Hyper Destructive
+      2)   Will cause damage to player anywhere in sector (Can't fly over).
+      3)   Can be placed on ceiling for same sector damage effect
+
+LIGHTING BOLT : Sprite # 4890
+
+     Lightning Bolt is used to spawn the flash position of lighting when used 
+     with Sector Effector #28.
+     Lotag: 0
+     HiTag: Set equal to Sector Effector #28 HiTag.
+     Note: Any number of Lighting Bolts can be attached to any 
+     Sector Effector #28.
+
+
+
+	

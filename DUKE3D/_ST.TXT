@@ -1,0 +1,305 @@
+--------------------------------------------------------------------------------
+Sector Tags Reference Guide
+1996 Allen H. Blum III
+--------------------------------------------------------------------------------
+
+-SECTOR TAGS -
+
+ 1  : WATER (SE 7)
+ 2  : UNDERWATER (SE 7)
+ 9  : STAR TREK DOORS
+ 15 : ELEVATOR TRANSPORT (SE 17)
+ 16 : ELEVATOR PLATFORM DOWN
+ 17 : ELEVATOR PLATFORM UP
+ 18 : ELEVATOR DOWN
+ 19 : ELEVATOR UP
+ 20 : CEILING DOOR
+ 21 : FLOOR DOOR
+ 22 : SPLIT DOOR
+ 23 : SWING DOOR
+ 25 : SLIDE DOOR (SE 15)
+ 26 : SPLIT STAR TREK DOOR
+ 27 : BRIDGE (SE 20)
+ 28 : DROP FLOOR (SE 21)
+ 29 : TEETH DOOR (SE 22)
+ 30 : ROTATE RISE BRIDGE
+ 31 : 2 WAY TRAIN (SE=30)
+ 10000+ : 1TIME SOUND
+ 32767 : SECRET ROOM
+ 65535 : END OF LEVEL
+
+--------------------------------------------------------------------------------
+Definitions:
+--------------------------------------------------------------------------------
+
+ST 1 : Water
+
+   :Used as Water Effect when the player walks on sector. If used with a
+    SE 7 (Transport) sprite, then it will move the player to the
+    underwater sector with ST 2.
+
+   Definition : SE 7 : Transport Underwater
+      Hitag : Set equal to one other SE 7 to Transport to.
+      Sector Lotag : 0 = Teleporter.
+                     1 = On top of water.
+                     2 = Underwater
+      Angle : none
+      Shade : none
+      Palette : 0 = Water
+                8 = Green Slime
+      Comment :
+         :When using with Sector Lotag 1 and 2 as water, the two sectors must
+          be exactly the same size or you will teleport to death.
+
+ST 2 : Underwater
+
+   :Used as Underwater Effect when the player moves in sector. If used with
+    a SE 7 (Transport) sprite, then it will move the player to the
+    underwater sector with ST 1.
+
+   Definition : SE 7 : Transport Underwater
+      Hitag : Set equal to one other SE 7 to Transport to.
+      Sector Lotag : 0 = Teleporter.
+                     1 = On top of water.
+                     2 = Underwater
+      Angle : none
+      Shade : none
+      Palette : 0 = Water
+                8 = Green Slime
+      Comment :
+         :When using with Sector Lotag 1 and 2 as water, the two sectors must
+          be exactly the same size or you will teleport to death.
+
+
+
+ST 9 : Star Trek Doors
+
+   :Doors that spread apart when opened like on Star Trek. Note that the
+    wall tile on the doors will squish when opened.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for door open sound.
+      :Use SPEED Sprite Lotag for opening speed.
+
+ST 15 : Elevator Transport
+
+   :Used as an Elevator that transports from one elevator shaft to
+    another to simulate going straight up from one floor to another.
+
+   Comment:
+      :Maximum of 2 floors.
+      :Sounds are set automatically
+
+   Definition : SE 17 : Elevator Transport
+      Hitag : Equal to one other SE 17.
+      Sector Lotag : 15
+      Sector Hitag : 0 = Bottom Floor
+                     1 = Top Floor
+      Angle : none
+      Shade : Darkest shade of the two SE 17 with equal Hitag is the
+              starting floor for the elevator.
+      Palette : none
+      Comment :
+         :Top and Bottom floors must be physically built at proper height
+          difference to work properly.
+         :Both Elevators must be Exactly the same size.
+
+ST 16 : Elevator Platform Down
+
+   :Used to Lower the Sector Floor from current Height Down to the next
+    Sector of lower height. On next activation, the sector floor will rise
+    up to the next Sector.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Sound.
+         Lotag = Start sound.
+         Hitag = Stop Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+
+ST 17 : Elevator Platform Up
+
+   :Used to Raise the Sector Floor from current Height Up to the next
+    Sector of higher height. On next activation, the sector floor will
+    drop down to the next Sector.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Sound.
+         Lotag = Start sound.
+         Hitag = Stop Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+
+ST 18 : Elevator Down
+
+   :Used to Lower the Sector Floor and Ceiling from current Height Down
+    to the next Sector of lower height. On next activation, the sector
+    floor and ceiling will rise up to the next Sector.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag sound.
+         Lotag = Start sound.
+         Hitag = Stop Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+
+ST 19 : Elevator Up
+
+   :Used to Raise the Sector Floor and Ceiling from current Height Up
+    to the next Sector of higher height. On next activation, the sector
+    floor and ceiling will drop down to the next Sector.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Sound.
+         Lotag = Start sound.
+         Hitag = Stop Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+
+ST 20 : Ceiling Door
+
+   :Used to Raise and Lower the Sector Ceiling from level with the
+    sector floor up to the height of the next sector ceiling height.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Open and Close Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+      :Use SE 10 to make the door auto-close.
+
+ST 21 : Floor Door
+
+   :Used to Raise and Lower the Sector Floor from level with the
+    sector ceiling down to the height of the next sector floor height.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Open and Close Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+      :Use SE 10 to make the door auto-close.
+
+ST 22 : Split Door
+
+   :Used to Raise and Lower the Sector Floor and Ceiling from level with
+    the next sector floor and ceiling, then together until the floor and
+    ceiling match height.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Open and Close Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+      :Use SE 10 to make the door auto-close.
+
+ST 23 : Swing Door
+
+   :Used as doors that swing the sector 90 degrees when activated. Note
+    that you can activate multiple ST 23 by giving the ST 11 Sprite
+    Hitag equal values.
+
+   Comment:
+    :Use MUSICANDSFX Sprite Lo and Hitag to door open and close sound.
+
+   Definition : SE 11 : Rotate Sector Door
+      Hitag : none
+      Angle : up = clockwise
+              down = counter-clockwise
+      Shade : none
+      Palette : none
+      Comment :
+         Sector will also rise to height of Sector Effector Sprite if it
+         is off the floor.
+
+
+ST 24 : Reserved
+
+ST 25 : Slide Door
+
+   :Used as a door that slides when opened.
+
+   Definition : SE 15 : Slide Door
+      Hitag : Set equal to other doors to be opened at same time.
+      Angle : Set to direction when door is closed.
+      Shade : none
+      Palette : none
+      Comment :
+         :Speed Sprite sets distance to door to open.
+         :Check !SE.map on how to build.
+         :Use MusicSFX sprite for sound.
+
+ST 26 : Split Star Trek Door
+
+   :Used to do the effects of both ST 9 (Star Trek Door) and ST 22
+    (Split Door). Doors will spread apart when opened like on Star
+    Trek. Note that the wall tile on the doors will squish when opened.
+    And will also Raise and Lower the Sector Floor and Ceiling from level
+    with the next sector floor and ceiling, then together until the floor
+    and ceiling match height.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for Open and Close Sound.
+      :Use SPEED Sprite Lotag for rate of movement.
+      :Use SE 10 to make the door auto-close.
+
+ST 27 : Bridge
+
+   :Used to stretch a sector when activated.
+
+   Hitag : none
+   Sector Lotag : 27
+   Angle : Set to direction to stretch sector.
+   Shade : none
+   Comment :
+      :Set relative alignment, (R key), on sector to move floor.
+      :Use Speed sprite for distance.
+
+ST 28 : Drop Floor
+
+   :Used to make a floor or ceiling drop to the height of the
+    SE sprite when activated by a Masterswitch.
+
+   Hitag : Set equal to others that activate at same time.
+   Sector Lotag : 28
+   Angle : up = Drop Ceiling
+           down = Drop Floor
+   Shade : none
+   Comment:
+      :Floor or Ceiling matches height of SE sprite at Pre-map then
+       drops to set position when activated.
+      :To do opposite, the SE sprite height must be put into sector.
+
+ST 29 : Teeth Door
+
+ST 30 : Rotate Rise Door
+
+   :Used to rotate the sector floor 90 degrees and rise to the height of
+    the SE 0 Sprite. Use SE 1 as the Pivot point for the sector.
+
+   Comment:
+      :Use MUSICANDSFX Sprite Lotag for sound.
+      :Use SPEED for rate of turning.
+      :Use SE 0 Sprite Palette for direction.
+         Palette 0 = clockwise
+         Palette 1 = counter-clockwise
+
+ST 31 : 2 Way Train
+
+   :Used as a Train car that only goes back and forth from point A to
+    point B.
+
+   Hitag : Set equal to a switch to activate.
+   Sector Lotag : 31
+   Angle : Set to direction of front of Car.
+   Shade : none
+   Comment:
+      :Use with 2 Locator sprites to define track.
+      :Activator with equal hitag+1 activates when car stops at point A.
+       Activator with equal hitag+2 activates when car stops at point B.
+
+ST 10000+ : 1 Time Sound
+
+   :Used to play a sound one time when the player walks on the sector
+    floor. Tag the sector Lotag with (10000 + sound number).
+
+ST 32767 : Secret Room
+
+   :Use Sector Lotag of 32767 to tag as a secret place to be counted at
+   the end of level stats.
+
+ST 65535 : End of Level
+
+   :Used to end the level when the player walks on the sector floor.
+
+

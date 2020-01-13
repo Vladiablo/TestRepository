@@ -1,0 +1,20 @@
+	 Welcome to First Encounters
+	 ___________________________
+
+To start type FIRSTENC in your installed directory.
+
+Players with sound cards should run SETUP first in
+order to configure their cards. Those with a Gravis
+or Gravis Max card should run LOADPATS first for the
+Midi to work correctly in the SETUP program.
+
+Once installed a sound card setup can be removed by deleting
+the HMISET.CFG file. This means that First Encounters
+will run with no sound or music, and may run faster on
+machines with 4Meg of memory.
+
+SETUP.EXE can be used at any time for recreating this file.
+
+
+				  RIGHT ON COMMANDER!
+

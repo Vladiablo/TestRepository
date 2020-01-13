@@ -1,0 +1,522 @@
+--------------------------------------------------------------------------------
+Sector Effect Reference Guide
+1996 Allen H. Blum III
+--------------------------------------------------------------------------------
+
+-SECTOR EFFECTOR -
+
+ 0  : ROTATED SECTOR
+ 1  : PIVOT SPRITE FOR SE 0
+ 2  : EARTHQUAKE
+ 3  : RANDOM LIGHTS AFTER SHOT OUT
+ 4  : RANDOM LIGHTS
+ 6  : SUBWAY
+ 7  : TRANSPORT (UNDERWATER ST 1 or 2)
+ 8  : UP OPEN DOOR LIGHTS
+ 9  : DOWN OPEN DOOR LIGHTS
+ 10 : DOOR AUTO CLOSE (H=DELAY)
+ 11 : ROTATE SECTOR DOOR
+ 12 : LIGHT SWITCH
+ 13 : C-9 EXPLOSIVE
+ 14 : SUBWAY CAR
+ 15 : SLIDE DOOR (ST 25)
+ 16 : ROTATE REACTOR SECTOR
+ 17 : ELEVATOR TRANSPORT (ST 15)
+ 18 : INCREMENTAL SECTOR RAISE/FALL
+ 19 : SHOT TOUCHPLATE CIELING DOWN
+ 20 : BRIDGE (ST 27)
+ 21 : DROP FLOOR (ST 28)
+ 22 : PRONG (ST 29)
+ 23 : ONE WAY TELEPORTER EXIT
+ 24 : CONVAIRBELT
+ 25 : ENGINE
+ 27 : CAMERA FOR PLAYBACK
+ 28 : LIGHTING BOLT ENGINE
+ 29 : FLOAT
+ 30 : 2 WAY TRAIN (ST=31)
+ 31 : FLOOR RISE
+ 32 : CEILING FALL
+ 33 : SPAWN JIB W/QUAKE
+ 36 : SKRINK RAY SHOOTER
+
+--------------------------------------------------------------------------------
+Definitions:
+--------------------------------------------------------------------------------
+
+SE 0 : Rotate Sector
+
+   :Used to rotate a sector around a pivot point.
+
+   Hitag : Set equal to Hitag of SE 1 as pivot point for sector.
+   Sector Lotag : none
+   Angle : up = Rotate all points around SE 1.
+           down = Rotate sector around SE 1.
+   Shade : none
+   Palette : none
+   Comment :
+      :If Relative alignment is set on the floor,( the R key ), then all
+       sprites and actors on the floor will rotate with the sector
+
+SE 1 : Pivot for Rotate SE 0
+
+   :Used as a pivot point for Sector Effector 0 to rotate a sector around.
+
+   Hitag : Set equal to Hitag of all SE 0 to rotate.
+   Sector Lotag : none
+   Angle : up = Rotate clockwise
+           down = Rotate counter-clockwise
+   Shade : none
+   Palette : none
+   Comment :
+
+SE 2 : Earthquake
+
+   :Used to set off an earthquake. During the earthquake the screen will
+   shake for about 4 seconds. The sector will move in the direction that
+   the SE sprite is pointing. If there is a slope, then it will rise
+   during the earthquake.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : Direction to move sector during earthquake.
+   Shade : none
+   Palette : none
+   Comment :
+      :Must activate with Masterswitch.
+      :If there is a slope, then it will be made flat at pre-map and
+       raised during the earthquake to a maximum height of 4 clicks.
+
+SE 3 : Random lights after shot out
+
+   :Used to create lighting effect when lights are shot out. It will
+    also set the color of light when the light is on. Make the sector
+    shade dark when the light is out and make the SE sprite shade bright
+    when the light is on.
+
+   Hitag : Set equal to Wall Lotag with graphic of Light or
+           Set equal to Ceiling Hitag with graphic of Light.
+   Sector Lotag : none
+   Angle : none
+   Shade : Set to brightness when light is on, set sector brightness to when light is off.
+   Palette : Set to Palette Lookup number when light is on.
+   Comment :
+      :Can be used with SE 12 to be turned on and off with a light
+       switch until the lights are shot out.
+      :The lights color is taken from the SE sprites Palette when the
+       light is on, and the sectors palette when the light is off.
+       Default is no color. e.g. palette = 0.
+      :Both the SE sprite and the sector can have different palettes.
+
+SE 4 : Random lights
+
+   :Used to make sector randomly flash in brightness. It will also set
+    the color of light when the light is on. Make the sector shade dark
+    when the light is off and make the SE sprite shade bright when the
+    light is on.
+
+   Hitag : Set for Random Flash number.
+   Sector Lotag : none
+   Angle : none
+   Shade : Set to brightness when light is on, set sector brightness to when light is off.
+   Palette : Set to when light is on.
+   Comment :
+      :Can NOT be used with SE 12 to be turned on and off with a light
+       switch.
+      :The lights color is taken from the SE sprites Palette when the
+       light is on, and the sectors palette when the light is off.
+       Default is no color. e.g. palette = 0.
+      :Both the SE sprite and the sector can have different palettes.
+
+SE 5 : Reserved
+
+SE 6 : Subway Engine
+
+   :Used as the Engine for a Subway. Use with SE 14 for multiple subway
+    cars. Must be used with Locator Sprite to set track.
+
+   Hitag : Set equal to Locator Lotag for starting position.
+   Sector Lotag : none
+   Sector Hitag : All sectors within Car sector must be equal.
+   Angle : Set for direction of Subway.
+   Shade : none
+   Palette : none
+   Comment :
+      :Set relative align on sector floor, (R key), to make sprites
+       move.
+      :If a Locator has a Hitag of 1, then the Subway will stop at that
+       locator for 5 seconds then continue.
+
+SE 7 : Transport / Water
+
+   :Used as Teleporter and Water Effect.
+
+   Hitag : Set equal to one other SE 7 to Transport to.
+   Sector Lotag : 0 = Teleporter.
+                  1 = On top of water.
+                  2 = Underwater
+   Angle : none
+   Shade : none
+   Palette: 0 = Normal/Default
+               > 0 = Teleporter won't play sfx or flash when used.
+   Sector Palette : 0 = Water
+                             8 = Green Slime
+   Comment :
+      :If the Sector Effector Sprite is off the ground, then you will only 
+       teleport when dukes waist is at the same height as the sprite and in 
+       the same sector.
+      :When using with Sector Lotag 1 and 2 as water, the two sectors must be
+       exactly the same size or you will teleport to death.
+
+SE 8 : Up Open Door Lights
+
+   :Used to light up a room when a door is opened.
+
+   Hitag : Set equal to all other SE 8 used together.
+   Sector Lotag : Use with any that raises the ceiling. ex: Sector Lotag 20
+   Angle : none
+   Shade : Set to brightness when light is on, set sector brightness to when light is off.
+   Palette : none
+   Comment :
+      :At least one SE 8 with equal Hitag must be in a sector in which the
+       ceiling rises.
+
+SE 9 : Down Open Door Lights
+
+   :Used to light up a room when a light comes down from the ceiling.
+
+   Hitag : Set equal to all other SE 9 used together.
+   Sector Lotag : Use with any that lowers to floor. ex: Sector Lotag 21
+   Angle : none
+   Shade : Set to brightness when light is on, set sector brightness to when light is off.
+   Palette : none
+   Comment :
+      :At least one SE 8 with equal Hitag must be in a sector in witch the floor rises.
+
+SE 10 : Door Auto Close
+
+   :Used to Automatically close a door after a set delay.
+
+   Hitag : Delay until door closes. ex: 128 equals 4 seconds.
+   Sector Lotag : Use with all door Sector Lotags
+   Angle : none
+   Shade : none
+   Palette : none
+   Comment :
+
+SE 11 : Rotate Sector Door
+
+   :Used as a door that rotates 90 degrees when activated.
+
+   Hitag : none
+   Sector Lotag : 23
+   Angle : none
+   Shade : none
+   Palette : 0 = clockwise
+             1 = Counter-clockwise
+   Comment :
+      :Will also activate other SE 11 with equal Hitag values.
+
+SE 12 : Light Switch
+
+   :Used light up a sector when activated with a switch.
+
+   Hitag : Set equal to all other SE 12 used together
+   Sector Lotag : none
+   Angle : none
+   Shade : Set to brightness when light is on, set sector brightness to when light is off.
+   Palette : Set to when lights are on.
+   Comment :
+      :The lights color is taken from the SE sprites Palette when the
+       light is on, and the sectors palette when the light is off.
+       Default is no color. e.g. palette = 0.
+      :Both the SE sprite and the sector can have different palettes.
+
+SE 13 : C-9 Explosive
+
+   :Used to blow apart the ceiling and floor of a sector to create holes
+    in walls
+
+    Hitag : Set equal to SEENINE, OOZCAN, or CRACK sprites to activate
+    Sector Lotag : none
+    Angle : up = both ceiling and floor come together at Pre-map.
+            down = Only the ceiling or the floor matches height with the
+                   SE sprite depending on which one is closest.
+    Shade : none
+    Palette : none
+    Comment :
+       :Can be activated by a Masterswitch with equal Hitags.
+       :If the ceiling has a Sky texture without Parallax set, then the
+        tile will be replaced at Pre-map with the closest non-Sky
+        texture. When it explodes, the sky will change to Parallax.
+
+SE 14 : Subway Car
+
+   :Used as the Car for a Subway. Use with SE 6 for Subway engine.
+    Must be used with Locator Sprite to set track.
+
+   Hitag : Set equal to Locator Lotag for starting position.
+   Sector Lotag : none
+   Sector Hitag : All sectors within Car sector must be equal.
+   Angle : Set for direction of Subway.
+   Shade : none
+   Palette : none
+   Comment :
+      :Set relative align on sector floor, (R key), to make sprites
+       move.
+      :If a Locator has a Hitag of 1, then the Subway will stop at that
+       locator for 5 seconds then continue.
+
+SE 15 : Slide Door
+
+   :Used as a door that slides when opened.
+
+   Hitag : Set equal to other doors to be opened at same time.
+   Sector Lotag : 25
+   Angle : Set to direction when door is closed.
+   Shade : none
+   Palette : none
+   Comment :
+      :Speed Sprite sets distance to door to open.
+      :Check !SE.map on how to build.
+      :Use MusicSFX sprite for sound.
+
+SE 16 : Reserved
+
+SE 17 : Elevator Transport
+
+   :Used as an Elevator that transports from one elevator shaft to
+    another to simulate going straight up from one floor to another.
+
+   Hitag : Equal to one other SE 17.
+   Sector Lotag : 15
+   Sector Hitag : 0 = Bottom Floor
+                  1 = Top Floor
+   Angle : none
+   Shade : Darkest shade of the two SE 17 with equal Hitag is the
+           starting floor for the elevator.
+   Palette : none
+   Comment :
+      :Top and Bottom floors must be physically built at proper height
+       difference to work properly.
+      :Both Elevators must be Exactly the same size.
+
+SE 18 : Incremental Sector Raise/Fall
+
+   : Used as sector floor or ceiling raise/fall that can be activated incrementally.
+    
+   Hitag : Set equal to units moved per activation.
+           Unit = one page-up/page-down in build.
+   Angle : Up = Floor will move incrementally (by Hitag #).
+           Down = Ceiling will move incrementally.
+   Palette : 0 = Start at build set height.
+            >0 = height set to SE Sprite in premap.
+   Comment:
+      :Sector will move in opposite direction as it is at premap.
+       i.e. if sector is set to SE Sprite floor/ceiling will move to set height.
+
+SE 19 : Shot Touchplate Ceiling Down
+
+   :Used to close ceiling when a shot or explosion hits within the
+    sector.
+
+   Hitag : Equal to others to activate at same time.
+   Sector Lotag : none
+   Angle : none
+   Shade : none
+   Comment :
+      :Does not check to when a shot or object passes through the
+       sector.
+      :Use MusicSFX sprite for sound.
+
+SE 20 : Bridge
+
+   :Used to stretch a sector when activated.
+
+   Hitag : none
+   Sector Lotag : 27
+   Angle : Set to direction to stretch sector.
+   Shade : none
+   Comment :
+      :Set relative alignment, (R key), on sector to move floor.
+      :Use Speed sprite for distance.
+
+SE 21 : Drop Floor
+
+   :Used to make a floor or ceiling drop to the height of the
+    SE sprite when activated by a Masterswitch.
+
+   Hitag : Set equal to others that activate at same time.
+   Sector Lotag : 28
+   Angle : up = Drop Ceiling
+           down = Drop Floor
+   Shade : none
+   Comment:
+      :Floor or Ceiling matches height of SE sprite at Pre-map then
+       drops to set position when activated.
+      :To do opposite, the SE sprite height must be put into sector.
+
+SE 22 : Prong
+
+   :Used as Door inside Teeth Prongs.
+
+   Hitag : Set equal to Hitag of Sector Lotaged 29.
+   Sector Lotag : 0, Outside Sector Lotag of 29
+   Angle : none
+   Shade : none
+   Comment:
+      :This Effector was not tested in the, game so use at your own risk.
+       It may cause problems in multi-play.
+      :See !SE.MAP for usage.
+
+SE 23 : One Way Teleporter Exit
+
+   :  Used as an exit indicator for a one way teleporter.
+
+   Hitag:  Set equal to teleporter entrance sprite Hitag (SE 7).
+   Angle:  Actor facing on exit.
+   Palette:  0 = Normal/default
+            >0 = No Teleporter sound or flash on use.
+
+SE 24 : Conveyor belt
+
+   :Used to move sprites along the floor like a conveyor belt.
+
+   Hitag : Set equal to a switch to turn on and off.
+   Sector Lotag : none
+   Angle : Set to direction to move sprites.
+   Shade : none
+   Comment:
+      :Set relative alignment (R key) on sector floor to move sprites.
+      :Set Speed sprite equal to rate of movement.
+
+SE 25 : Engine Piston
+
+   :Used as a Piston that only goes up and down.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : none
+   Shade : none
+   Comment:
+      :Put SE sprite height to starting position of Piston.
+      :Speed sprite equals rate of movement.
+
+SE 26 : Reserved
+
+SE 27 : Camera for Playback
+
+   :Used as a camera position to view playback of game Demos.
+
+   Hitag : Set to maximum distance for the camera to view the action of
+           other players. e.g. 2048 equals largest grid in build.
+   Sector Lotag : none
+   Angle : none
+   Shade : none
+   Comment:
+      :Camera does not always work well with extreme heights.
+
+SE 28 : Lighting Engine
+
+   : Used to create lighting effect in an area of 10000. On random activation
+     will flash linked Lighting Bolt sprites and start sfx.
+
+   Hitag: Set equal to Lighting Bolt Sprite #4890 Hitag.
+   Angle: none
+   Shade: none.
+
+SE 29 : Floating Sector
+
+   :Used to make sector float like water or waves.
+
+   Hitag : Set to starting height of sector. 0-2047
+   Sector Lotag : none
+   Angle : none
+   Shade : none
+   Comment:
+      :Use Speed sprite to set height of wave.
+      :To use as a wave, the sector must only be made of 4 lines. Set
+       one wall as first wall (alt-f) next to another sector with a
+       SE 29 sprite in it to create a wave.
+
+SE 30 : 2 Way Train
+
+   :Used as a Train car that only goes back and forth from point A to
+    point B.
+
+   Hitag : Set equal to a switch to activate.
+   Sector Lotag : 31
+   Angle : Set to direction of front of Car.
+   Shade : none
+   Comment:
+      :Use with 2 Locator sprites to define track.
+      :Activator with equal hitag+1 activates when car stops at point A.
+       Activator with equal hitag+2 activates when car stops at point B.
+
+SE 31 : Floor Rise
+
+   :Used to rise or lower sector floor when activated by an Activator or
+    Masterswitch.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : Up = Move sector to SE sprite height when activated.
+                Down = Start sector height equal to SE sprite height at Pre-map.
+                              On activation, falls to pre set height.
+           	 
+   Shade : none
+   Comment:
+      :Use Speed to set rate of rise.
+      :Use MusicSFX sprite for sound.
+
+SE 32 : Ceiling Fall
+
+   :Used to rise or lower sector Ceiling when activated by an Activator or
+    Masterswitch.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : Up = Rise sector to SE sprite height when activated.
+                Down = Start sector height equal to SE sprite height at Pre-map.
+                              On activation, raises to pre set height.
+   Shade : none
+   Comment:
+      :Use Speed to set rate of rise.
+      :Use MusicSFX sprite for sound.
+
+SE 33 : Spawn Earthquake Jibs
+
+   :Used to spawn pieces of metal and rock from SE sprite during an
+    Earthquake.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : none
+   Shade : none
+   Comment:
+      :Jibs will be spawned whenever a earthquake anywhere on the map.
+
+SE 34 : Reserved
+
+SE 35 : Reserved
+
+SE 36 : Spawn Shot
+
+   :Used to Spawn a shot every 5 seconds when activated by a
+    Masterswitch.
+
+   Hitag : none
+   Sector Lotag : none
+   Angle : Set to direction to shoot.
+   Shade : none
+   Comment:
+      :Once activated, it will never stop shooting.
+      :Use Speed sprite to set object to shoot. e.g.
+       2556 : Shrink Ray
+       2605 : RPG
+       1650 : Mortar
+       1625 : Trooper Laser
+       1636 : Lizman Spit
+
+
+
+
